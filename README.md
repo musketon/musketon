@@ -2,6 +2,8 @@
   <img src="https://raw.githubusercontent.com/musketon/musketon/master/docs/res/musketon.png" alt="logo" width=400 />
 </h3>
 
+<hr />
+
 `musketon` gives you full control of who you grant access to your most personal data. You can authorize third parties to access specific data points about you, set an access expiry moment, arbitrarily decide to revoke access and follow an audit trail of when and why granted third parties accessed your data. 
 
 You could grant:
@@ -78,19 +80,19 @@ The stored features are `AES/CBC/PKCS5Padding` encrypted using the user's NEO wa
 
 The features that the user can currently define are:
 
-* `name`
+* name
 	* first name
 	* last name
-* `birthdate`
+* birthdate
 	* year
 	* month
 	* day
-* `address`
-	* country code
+* address
+	* country
 	* province / state
 	* city
-	* address line one
-	* address line two
+	* address line 1
+	* address line 2
 	* postal code
 * ...a lot more to be added [in the future](#support-more-features)
 
@@ -311,6 +313,10 @@ Currently only the 'read' license is implemented. Future additions could be the 
 ### More metadata and insights
 
 The current `musketon` implementation focuses on the core commands. Accompanied with a desktop app or webapp, it would be nice to be able get more metadata: listing all grants, sorting consumers by last read invocation, seeing which consumers use your data the most, etc. 
+
+### Popular repo distribution
+
+Distribute `musketon` to popular repositories like Homebrew, Maven Central, etc.
 
 ## Deployment status
 
