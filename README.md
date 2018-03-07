@@ -1,5 +1,5 @@
 <h3 align="center">
-  <img src="docs/res/musketon.png" alt="logo" width=400 />
+  <img src="{{ site.baseurl }}/docs/res/musketon.png" alt="logo" width=400 />
 </h3>
 
 `musketon` gives you full control of who you grant access to your most personal data. You can authorize third parties to access specific data points about you, set an access expiry moment, arbitrarily decide to revoke access and follow an audit trail of when and why granted third parties accessed your data. 
@@ -60,7 +60,7 @@ The consumer can:
 	* used by the users and consumers to encrypt and decrypt the user data and invoke the necessary smart contract operations
 	* can be incorparated into CLI's, browser extensions, desktop apps, menu bar extensions, etc.
 
-<img src="docs/res/architecture.png" width=700 />
+<img src="{{ site.baseurl }}/docs/res/architecture.png" width=800 />
 
 No intermediate server is needed, no intermidate party needs to be trusted, exchanging data is just 'peer-to-NEO-to-peer'.
 
@@ -92,7 +92,7 @@ The features that the user can currently define are:
 	* address line one
 	* address line two
 	* postal code
-* ...a lot more to be added [in the future](#future-plans)
+* ...a lot more to be added [in the future](#support-more-features)
 
 There are no required features or fields, the user chooses how complete the data should be. 
 
@@ -116,7 +116,7 @@ The current grantable features are:
 
 ## CLI
 
-The `musketon` client comes with a CLI, that can be downloaded from the [GitHub releases](https://github.com/musketon/musketon/releases) page or built from the source code, as described [below](#Development).
+The `musketon` client comes with a CLI, that can be downloaded from the [GitHub releases](https://github.com/musketon/musketon/releases) page or built from the source code, as described [below](#development).
 
 It requires Java 8 and Node.js 8 (or higher) to be installed. Before running your first command, verify in the `musketon.properties` file contained in the package that the `musketon.neon.nodejs` property for your OS is pointing to the correct Node.js path.
 
@@ -271,11 +271,11 @@ Create a browser extension, similar to the ones that password manager apps provi
 
 A website could present an second form that just has a single text field for the extension to fill in the public key, as demonstrated in the webshop example mock-up below:
 
-<img src="docs/res/webshop.png" width=900 />
+<img src="{{ site.baseurl }}/docs/res/webshop.png" width=1024 />
 
 Clicking the `musketon` extension icon would bring up the extension sheet:
 
-<img src="docs/res/webshop-extension-overlay.png" width=900 />
+<img src="{{ site.baseurl }}/docs/res/webshop-extension-overlay.png" width=1024 />
 
 Clicking _Authorize_ would invoke the `musketon` client's `authorize` and fill in the public key after which the form could be submitted. The consumer then has the public key necessary to read out the granted data.
 
