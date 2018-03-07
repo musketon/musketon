@@ -1,0 +1,48 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		jcenter()
+		maven {
+			 url 'https://plugins.gradle.org/m2/'
+		}
+	}
+	dependencies {
+		classpath "org.xtext:xtext-gradle-plugin:$xtendPluginVersion"
+		classpath "gradle.plugin.com.github.b3er.local.properties:local-properties-plugin:$localPropertiesPluginVersion"
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	jcenter()
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.xtext.xtend'
+
+archivesBaseName = "${rootProject.name}-${project.name}"
+
+apply from: "${rootProject.projectDir}/neo-util/neoj.gradle"
+
+dependencies {
+	compile project(':neo-util:annotations')
+	compile project(':neo-util:mock')
+
+	testCompile project(':neo-util:mock')
+	testCompile 'junit:junit:4.12'
+}
+
+def javaVersion = JavaVersion.VERSION_1_8
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+
+xtend {
+	generator {
+  		javaSourceLevel = javaVersion
+	}
+	preferences = [ 'useJavaCompilerCompliance' : true ]
+}

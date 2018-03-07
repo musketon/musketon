@@ -1,0 +1,18 @@
+buildscript {
+	ext.xtendPluginVersion = '1.0.20'
+	ext.protobufPluginVersion = '0.8.4'
+	ext.localPropertiesPluginVersion = '1.1'
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		jcenter()
+		maven {
+			 url 'https://plugins.gradle.org/m2/'
+		}
+	}
+	dependencies {
+		classpath "org.xtext:xtext-gradle-plugin:$xtendPluginVersion"
+		classpath "gradle.plugin.com.github.b3er.local.properties:local-properties-plugin:$localPropertiesPluginVersion"
+	}
+}

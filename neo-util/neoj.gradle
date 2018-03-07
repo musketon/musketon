@@ -1,0 +1,38 @@
+buildscript {
+	repositories {
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+	dependencies {
+		classpath "gradle.plugin.com.github.b3er.local.properties:local-properties-plugin:1.1"
+	}
+}
+
+apply plugin: "com.github.b3er.local.properties"
+
+task neoj(type: Exec) {
+	def outputDir = project.file("$buildDir/neoj")
+
+	inputs.files jar.archivePath
+	outputs.dir outputDir
+	outputs.upToDateSpec = new AndSpec();
+
+	workingDir outputDir
+
+	commandLine "dotnet", "$neojPath", "${jar.archivePath}"
+
+	doFirst {
+		delete outputDir
+		outputDir.mkdirs()
+	}
+
+	doLast {
+		def avm = "$outputDir/${jar.archiveName.replace('.jar','.avm')}"
+		if (!project.file(avm).exists()) throw new GradleException("Could not generate .avm")
+		println "Compiled jar: ${jar.archivePath}"
+		println "Into NEO bytecode: $avm"
+	}
+}
+
+neoj.dependsOn assemble
