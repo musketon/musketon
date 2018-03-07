@@ -1,5 +1,5 @@
 <h3 align="center">
-  <img src="{{ site.baseurl }}/docs/res/musketon.png" alt="logo" width=400 />
+  <img src="https://raw.githubusercontent.com/musketon/musketon/master/docs/res/musketon.png" alt="logo" width=400 />
 </h3>
 
 `musketon` gives you full control of who you grant access to your most personal data. You can authorize third parties to access specific data points about you, set an access expiry moment, arbitrarily decide to revoke access and follow an audit trail of when and why granted third parties accessed your data. 
@@ -60,7 +60,7 @@ The consumer can:
 	* used by the users and consumers to encrypt and decrypt the user data and invoke the necessary smart contract operations
 	* can be incorparated into CLI's, browser extensions, desktop apps, menu bar extensions, etc.
 
-<img src="{{ site.baseurl }}/docs/res/architecture.png" width=800 />
+<img src="https://raw.githubusercontent.com/musketon/musketon/master/docs/res/architecture.png" width=800 />
 
 No intermediate server is needed, no intermidate party needs to be trusted, exchanging data is just 'peer-to-NEO-to-peer'.
 
@@ -271,11 +271,11 @@ Create a browser extension, similar to the ones that password manager apps provi
 
 A website could present an second form that just has a single text field for the extension to fill in the public key, as demonstrated in the webshop example mock-up below:
 
-<img src="{{ site.baseurl }}/docs/res/webshop.png" width=1024 />
+<img src="https://raw.githubusercontent.com/musketon/musketon/master/docs/res/webshop.png" width=1024 />
 
 Clicking the `musketon` extension icon would bring up the extension sheet:
 
-<img src="{{ site.baseurl }}/docs/res/webshop-extension-overlay.png" width=1024 />
+<img src="https://raw.githubusercontent.com/musketon/musketon/master/docs/res/webshop-extension-overlay.png" width=1024 />
 
 Clicking _Authorize_ would invoke the `musketon` client's `authorize` and fill in the public key after which the form could be submitted. The consumer then has the public key necessary to read out the granted data.
 
