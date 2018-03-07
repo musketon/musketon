@@ -1,0 +1,72 @@
+syntax = "proto3";
+option java_package = "org.musketon.client";
+
+message Name {
+	string firstName = 1;
+	string lastName = 2;
+}
+
+message FirstName {
+	string firstName = 1;
+}
+
+message LastName {
+	string lastName = 1;
+}
+
+message Initials {
+	string initials = 1;
+}
+
+message Birthdate {
+	int32 year = 1;
+	int32 month = 2;
+	int32 day = 3;
+}
+
+message Birthyear {
+	int32 year = 1;
+}
+
+message Birthday {
+	int32 month = 1;
+	int32 day = 2;
+}
+
+message Address {
+	string country = 1;
+	string province = 2;
+	string city = 3;
+	string addressLine1 = 4;
+	string addressLine2 = 5;
+	string postalCode = 6;
+}
+
+message Country {
+	string country = 1;
+}
+
+message City {
+	string city = 1;
+	string province = 2;
+	string country = 3;
+}
+
+message Grant {
+	string consumer = 1;
+	string license = 2;
+	int64 issuedTimestamp = 3;
+	int64 expiry = 4;
+}
+
+message AuditTrail {
+	string consumer = 1;
+	int32 year = 2;
+	repeated Record records = 3;
+	
+	message Record {
+		int64 timestamp = 1;
+		string featureId = 2;
+		string reason = 3;
+	}
+}

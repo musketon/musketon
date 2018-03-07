@@ -1,0 +1,68 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		jcenter()
+		maven {
+			 url 'https://plugins.gradle.org/m2/'
+		}
+	}
+	dependencies {
+		classpath "org.xtext:xtext-gradle-plugin:$xtendPluginVersion"
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	jcenter()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.xtext.xtend'
+apply plugin: 'maven'
+apply plugin: 'application'
+
+dependencies {
+	compile project(':contract')
+	compile project(':neo-util:mock')
+	compile project(':client-protobuf')
+	compile 'com.google.guava:guava:24.0-jre'
+	compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.9.0'
+	compile 'com.github.oehme.xtend:xtend-contrib:1.1.0'
+	compile 'org.bouncycastle:bcprov-jdk15on:1.59'
+	compile 'com.neovisionaries:nv-i18n:1.22'
+	compile 'commons-cli:commons-cli:1.4'
+	compile 'org.apache.commons:commons-text:1.2'
+
+	testCompile 'junit:junit:4.12'
+}
+
+def javaVersion = JavaVersion.VERSION_1_8
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+
+xtend {
+	generator {
+  		javaSourceLevel = javaVersion
+	}
+	preferences = [ 'useJavaCompilerCompliance' : true ]
+}
+
+test {
+	exclude '**/TestMusketonClientPrivnet*'
+}
+
+mainClassName = 'org.musketon.client.cli.MusketonCLI'
+applicationName = "${rootProject.name}"
+archivesBaseName = "${rootProject.name}-${project.name}"
+
+applicationDistribution.from("src/main/neon") {
+	into "lib/neon"
+}
+
+applicationDistribution.from("etc/musketon.properties") {
+	into "."
+}

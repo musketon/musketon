@@ -1,3 +1,5 @@
 include 'neo-util:annotations'
 include 'neo-util:mock'
 include 'contract'
+include 'client-protobuf'
+include 'client'
