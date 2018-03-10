@@ -4,6 +4,11 @@
 
 <hr />
 
+[![](https://img.shields.io/github/release/musketon/musketon.svg?style=flat)](https://github.com/musketon/musketon/releases)
+[![](https://img.shields.io/badge/discord-@florisvdg-blue.svg?style=flat)](https://discord.gg/DtzSb2Z)
+
+<br />
+
 `musketon` gives you full control of who you grant access to your most personal data. You can authorize third parties to access specific data points about you, set an access expiry moment, arbitrarily decide to revoke access and follow an audit trail of when and why granted third parties accessed your data. 
 
 You could grant:
