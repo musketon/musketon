@@ -9,6 +9,10 @@
 
 <br />
 
+🎉[**_Proud award of merit ($15,000) winner in the 1st NEO / Microsoft Developer Competition_**](https://neo.org/awards.html) 🎉
+
+<br />
+
 `musketon` gives you full control of who you grant access to your most personal data. You can authorize third parties to access specific data points about you, set an access expiry moment, arbitrarily decide to revoke access and follow an audit trail of when and why granted third parties accessed your data. 
 
 You could grant:
