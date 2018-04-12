@@ -38,7 +38,7 @@ People have gotten used to going around filling out forms on nearly any website 
 
 `musketon` is not only there for the users: businesses need to comply to a rapidly rising number of regulations to protect user data. This forces them to put a lot of effort on meeting these requirements, while that is _not_ their core business. `musketon` offers a standardized way to offload a big part of the burden. 
 
-For EU businesses, incorporating `musketon` means immediate [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) compliance.
+For EU businesses, incorporating `musketon` means much easier [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) compliance.
 
 ## Entities and terminology
 
@@ -129,7 +129,7 @@ The current grantable features are:
 
 The `musketon` client comes with a CLI, that can be downloaded from the [GitHub releases](https://github.com/musketon/musketon/releases) page or built from the source code, as described [below](#development).
 
-It requires Java 8 and Node.js 8 (or higher) to be installed. Before running your first command, verify in the `musketon.properties` file contained in the package that the `musketon.neon.nodejs` property for your OS is pointing to the correct Node.js path.
+The CLI requires Java 8 and Node.js 8 (or higher) to be installed. Before running your first command, verify in the `musketon.properties` file contained in the package that the `musketon.neon.nodejs` property for your OS is pointing to the correct Node.js path.
 
 To show the available commands, run:
 
